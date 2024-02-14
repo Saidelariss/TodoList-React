@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --largeur: 350px;
+  --hauteur: 28px;
+}
+
+label,
+h1 {
+  color: white;
+}
+body {
+  background-color: #333;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.add {
+  width: var(--largeur);
+  height: var(--hauteur);
+  color: hsl(200, 100%, 50%);
+  background-color: hsl(200, 100%, 50%, 0.1);
+  cursor: pointer;
+  outline: none;
+}
+
+.add:hover {
+  outline: none;
+
+  background-color: hsl(200, 100%, 50%, 0.2);
+}
+
+.new-item-input {
+  height: var(--hauteur);
+  width: var(--largeur);
+  border: 1px solid hsl(200, 100%, 40%);
+  background: hsl(200, 100%, 30%);
+  outline: none;
+  margin-bottom: 7px;
+  margin-top: 4px;
+}
+
+.new-item {
+  font-size: 19px;
+}
+
+/* input[type="checkbox"]::before {
+  content: "";
+  display: inline-block;
+  border: 1px solid red;
+  border-radius: 50%;
+  padding: 100%;
+} */
+
+input[type="checkbox"] {
+  border: 1px solid red;
+  color: red;
+}
+
+.item {
+  font-size: 1.2rem;
+  /* display: inline-block;
+  width: 55px; */
+}
+.delete:hover {
+  background-color: #652727;
+}
+.delete {
+  margin-left: 5px;
+  border: 1px solid red;
+  color: red;
+  background-color: #481d1d;
+  padding: 4px;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 5px;
+}
+
+#check:checked + label {
+  color: hsl(200, 41%, 43%);
+}
+/* 
+#check:checked ~ .delete {
+  cursor: pointer;
+} */
